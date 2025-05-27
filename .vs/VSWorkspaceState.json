@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Frontend",
+    "\\Frontend\\AmbridgeMobile",
+    "\\Frontend\\AmbridgeMobile\\android",
+    "\\Frontend\\AmbridgeMobile\\android\\app"
   ],
-  "SelectedNode": "\\C:\\Users\\shank\\Source\\Repos\\AmbridgeMobile",
+  "SelectedNode": "\\Frontend\\AmbridgeMobile\\android\\app\\build.gradle",
   "PreviewInSolutionExplorer": false
 }

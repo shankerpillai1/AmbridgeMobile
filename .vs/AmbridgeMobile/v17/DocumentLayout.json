@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\android\\app\\build.gradle||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend\\AmbridgeMobile\\android\\app\\build.gradle||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\android\\build.gradle||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend\\AmbridgeMobile\\android\\build.gradle||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend\\AmbridgeMobile\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\babel.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Frontend\\AmbridgeMobile\\babel.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +43,68 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "build.gradle",
+              "DocumentMoniker": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\android\\build.gradle",
+              "RelativeDocumentMoniker": "Frontend\\AmbridgeMobile\\android\\build.gradle",
+              "ToolTip": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\android\\build.gradle",
+              "RelativeToolTip": "Frontend\\AmbridgeMobile\\android\\build.gradle",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-27T15:07:21.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "build.gradle",
+              "DocumentMoniker": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\android\\app\\build.gradle",
+              "RelativeDocumentMoniker": "Frontend\\AmbridgeMobile\\android\\app\\build.gradle",
+              "ToolTip": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\android\\app\\build.gradle",
+              "RelativeToolTip": "Frontend\\AmbridgeMobile\\android\\app\\build.gradle",
+              "ViewState": "AQIAAEsAAAAAAAAAAADgv1gAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-23T17:05:47.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "babel.config.js",
+              "DocumentMoniker": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\babel.config.js",
+              "RelativeDocumentMoniker": "Frontend\\AmbridgeMobile\\babel.config.js",
+              "ToolTip": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\babel.config.js",
+              "RelativeToolTip": "Frontend\\AmbridgeMobile\\babel.config.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-23T14:30:25.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\package.json",
+              "RelativeDocumentMoniker": "Frontend\\AmbridgeMobile\\package.json",
+              "ToolTip": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\Frontend\\AmbridgeMobile\\package.json",
+              "RelativeToolTip": "Frontend\\AmbridgeMobile\\package.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-20T17:14:36.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\shank\\source\\repos\\AmbridgeMobile\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-05-20T14:46:13.456Z"
             }
           ]
         }

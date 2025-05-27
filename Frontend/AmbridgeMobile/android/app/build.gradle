@@ -82,6 +82,14 @@ def enableProguardInReleaseBuilds = (findProperty('android.enableProguardInRelea
 def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
 
 android {
+    splits {
+        abi {
+            enable true
+            reset()
+            include "x86", "x86_64"  // Only for emulator
+            universalApk false
+        }
+    }
     ndkVersion rootProject.ext.ndkVersion
 
     buildToolsVersion rootProject.ext.buildToolsVersion
