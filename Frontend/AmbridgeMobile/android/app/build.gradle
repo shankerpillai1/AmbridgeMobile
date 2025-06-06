@@ -97,6 +97,11 @@ android {
 
     namespace 'com.shankerpillai.AmbridgeMobile'
     defaultConfig {
+        externalNativeBuild {
+            cmake {
+                cppFlags "-Wno-error=overloaded-virtual"
+            }
+        }
         applicationId 'com.shankerpillai.AmbridgeMobile'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion

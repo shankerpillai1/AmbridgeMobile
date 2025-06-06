@@ -21,6 +21,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
+      "versionCode": 1,
       "package": "com.shankerpillai.AmbridgeMobile"
     },
     "web": {
