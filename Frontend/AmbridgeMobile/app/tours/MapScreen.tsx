@@ -1,34 +1,31 @@
-import MapView, { UrlTile } from 'react-native-maps';
-import { StyleSheet, View, Dimensions } from 'react-native';
+
+
+import { WebView } from 'react-native-webview';
+import { View, StyleSheet } from 'react-native';
 
 export default function MapScreen() {
     return (
         <View style={styles.container}>
-            <MapView
+            <WebView
                 style={styles.map}
-                initialRegion={{
-                    latitude: 40.277,
-                    longitude: -79.929,
-                    latitudeDelta: 0.01,
-                    longitudeDelta: 0.01,
+                source={{
+                    html: `
+            <html>
+              <body style="margin:0;padding:0">
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=-80.2397,40.5764,-80.2170,40.6083&layer=mapnik"
+                  style="width:100%; height:100%; border:none;"
+                ></iframe>
+              </body>
+            </html>
+          `,
                 }}
-            >
-                <UrlTile
-                    urlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    maximumZ={19}
-                    flipY={false}
-                />
-            </MapView>
+            />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    map: {
-        width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
-    },
+    container: { flex: 1 },
+    map: { flex: 1 },
 });

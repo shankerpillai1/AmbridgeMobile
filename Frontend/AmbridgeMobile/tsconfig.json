@@ -2,10 +2,12 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "jsx": "react-native",
+    "moduleResolution": "node", // default for React Native
+    "target": "esnext",
+    "module": "esnext",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": [ "./*" ]
     }
   },
   "include": [
