@@ -6,8 +6,13 @@ export default function ToursScreen() {
     return (
         <View style={styles.container}>
             <Button
-                title="Walking Tour 1"
+                title="All Locations"
                 onPress={() => router.push('./tours/MapScreen')}
+            />
+            <View style={styles.spacer} />
+            <Button
+                title="Walking Tour 1"
+                onPress={() => router.push('./tours/TourOne')}
             />
         </View>
     );
@@ -18,5 +23,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         padding: 16,
+    },
+    spacer: {
+        height: 16,
     },
 });
