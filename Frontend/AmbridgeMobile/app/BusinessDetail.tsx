@@ -36,6 +36,7 @@ export default function BusinessDetail() {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
+            <View style={styles.spacer} />
             <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
                 <Text style={styles.backButtonText}>? Back</Text>
             </TouchableOpacity>
@@ -74,5 +75,8 @@ const styles = StyleSheet.create({
     backButtonText: {
         fontSize: 16,
         color: '#0066cc',
-    }
+    },
+    spacer: {
+        height: 24,
+    },
 });
