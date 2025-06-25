@@ -1,4 +1,5 @@
 import { View, Text, Image, ScrollView, StyleSheet, Dimensions } from 'react-native';
+import { useFonts, Cinzel_700Bold } from '@expo-google-fonts/cinzel';
 
 // Importing local images using require()
 const bannerImages = [
@@ -8,6 +9,11 @@ const bannerImages = [
 ];
 
 export default function HomeScreen() {
+
+    const [fontsLoaded] = useFonts({
+        Cinzel_700Bold,
+    });
+
     return (
         <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.spacer} />
@@ -33,9 +39,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     header: {
-        fontSize: 28,
-        fontWeight: 'bold',
-        padding: 16,
+        fontSize: 32,
+        fontFamily: 'Cinzel_700Bold',
+        textAlign: 'center',
+        paddingVertical: 20,
         backgroundColor: '#fff',
     },
     bannerImage: {
@@ -45,6 +52,7 @@ const styles = StyleSheet.create({
     },
     welcomeText: {
         fontSize: 22,
+        fontFamily: 'Cinzel_700Bold',
         fontWeight: '600',
         textAlign: 'center',
         padding: 16,

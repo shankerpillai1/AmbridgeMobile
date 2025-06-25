@@ -11,7 +11,6 @@ interface Business {
 }
 
 export default function BusinessDetail() {
-
     const { id } = useLocalSearchParams<{ id: string }>();
     const [business, setBusiness] = useState<Business | null>(null);
     const [loading, setLoading] = useState(true);
@@ -32,12 +31,10 @@ export default function BusinessDetail() {
 
     if (loading || !business) return <Text style={{ margin: 20 }}>Loading...</Text>;
 
-
-
     return (
         <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.spacer} />
-            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <TouchableOpacity onPress={() => router.push('/businesses')} style={styles.backButton}>
                 <Text style={styles.backButtonText}>? Back</Text>
             </TouchableOpacity>
             <Text style={styles.title}>{business.title}</Text>
@@ -52,7 +49,10 @@ export default function BusinessDetail() {
 }
 
 const styles = StyleSheet.create({
-    container: { padding: 16, alignItems: 'center' },
+    container: {
+        padding: 16,
+        alignItems: 'center',
+    },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     },
     backButtonText: {
         fontSize: 16,
-        color: '#0066cc',
+        color: '#b22222', // Brick red style back link
     },
     spacer: {
         height: 24,
