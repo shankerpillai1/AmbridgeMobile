@@ -53,7 +53,7 @@ export default function MapScreen() {
           <div id="map"></div>
           <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
           <script>
-            const map = L.map('map').setView([40.5926, -80.2259], 15);
+            const map = L.map('map').setView([40.5967, -80.2317], 17);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 19
             }).addTo(map);
