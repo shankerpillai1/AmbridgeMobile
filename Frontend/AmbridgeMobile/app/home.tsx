@@ -1,6 +1,13 @@
-import { View, Text, Image, ScrollView, StyleSheet, Dimensions } from 'react-native';
+import { useEffect, useState } from 'react';
+import { View, Text, Image, StyleSheet, Dimensions, ScrollView, ActivityIndicator } from 'react-native';
 import { useFonts, Cinzel_700Bold } from '@expo-google-fonts/cinzel';
-import { WebView } from 'react-native-webview';
+import { supabase } from '@/lib/supabaseClient';
+
+interface FacebookPost {
+    id: number;
+    text: string;
+    image_url: string | null;
+}
 
 const bannerImages = [
     require('../assets/images/ambridgeView.jpeg'),
@@ -10,25 +17,47 @@ const bannerImages = [
 
 export default function HomeScreen() {
     const [fontsLoaded] = useFonts({ Cinzel_700Bold });
+    const [posts, setPosts] = useState<FacebookPost[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        async function fetchPosts() {
+            const { data, error } = await supabase
+                .from('facebook_posts')
+                .select('*')
+                .order('id', { ascending: false })
+                .limit(10);
+            if (error) {
+                console.error('Error fetching posts:', error);
+            } else {
+                setPosts(data);
+            }
+            setLoading(false);
+        }
+        fetchPosts();
+    }, []);
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.spacer} />
             <Text style={styles.header}>Home</Text>
 
-            {/* First Image */}
-            <Image source={bannerImages[0]} style={styles.bannerImage} resizeMode="cover" />
+            {loading ? (
+                <ActivityIndicator size="large" color="#000" style={{ marginVertical: 40 }} />
+            ) : (
+                <View style={styles.feedContainer}>
+                    {posts.map((post) => (
+                        <View key={post.id} style={styles.postContainer}>
+                            {post.image_url && (
+                                <Image source={{ uri: post.image_url }} style={styles.postImage} />
+                            )}
+                            <Text style={styles.postText}>{post.text}</Text>
+                        </View>
+                    ))}
+                </View>
+            )}
 
-            {/* Facebook Feed WebView */}
-            <View style={styles.webviewContainer}>
-                <WebView
-                    source={{ uri: 'https://www.facebook.com/Ambridgehistoricdistrict/' }}
-                    style={styles.webview}
-                />
-            </View>
-
-            {/* Remaining Images */}
-            {bannerImages.slice(1).map((img, index) => (
+            {bannerImages.map((img, index) => (
                 <Image key={index} source={img} style={styles.bannerImage} resizeMode="cover" />
             ))}
 
@@ -42,6 +71,9 @@ const styles = StyleSheet.create({
         paddingBottom: 24,
         backgroundColor: 'white',
     },
+    spacer: {
+        height: 24,
+    },
     header: {
         fontSize: 32,
         fontFamily: 'Cinzel_700Bold',
@@ -49,18 +81,32 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         backgroundColor: '#fff',
     },
+    feedContainer: {
+        paddingHorizontal: 16,
+        marginBottom: 20,
+    },
+    postContainer: {
+        marginBottom: 20,
+        backgroundColor: '#f9f9f9',
+        padding: 12,
+        borderRadius: 6,
+        borderWidth: 1,
+        borderColor: '#ddd',
+    },
+    postImage: {
+        width: '100%',
+        height: 200,
+        borderRadius: 6,
+        marginBottom: 10,
+    },
+    postText: {
+        fontSize: 16,
+        color: '#333',
+    },
     bannerImage: {
         width: Dimensions.get('window').width,
         height: 180,
         marginBottom: 12,
-    },
-    webviewContainer: {
-        height: 400, // Adjust as needed
-        width: Dimensions.get('window').width,
-        marginBottom: 12,
-    },
-    webview: {
-        flex: 1,
     },
     welcomeText: {
         fontSize: 22,
@@ -69,8 +115,5 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         padding: 16,
         color: '#333',
-    },
-    spacer: {
-        height: 24,
     },
 });

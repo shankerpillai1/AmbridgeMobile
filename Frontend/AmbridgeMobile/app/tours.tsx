@@ -11,7 +11,7 @@ export default function ToursScreen() {
             />
             <View style={styles.spacer} />
             <Button
-                title="Walking Tour 1"
+                title="Markers"
                 onPress={() => router.push('./tours/TourOne')}
             />
         </View>
