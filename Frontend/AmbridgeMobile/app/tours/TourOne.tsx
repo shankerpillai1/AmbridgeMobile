@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { supabase } from '@/lib/supabaseClient';
+import { useRouter } from 'expo-router';
 
 interface Location {
     id: number;
@@ -10,18 +11,19 @@ interface Location {
     longitude: number;
     description: string;
     image_url: string;
-    tour: string; // assuming this field exists
+    tour: string;
 }
 
 export default function TourOne() {
     const [htmlContent, setHtmlContent] = useState<string | null>(null);
+    const router = useRouter();
 
     useEffect(() => {
         (async () => {
             const { data, error } = await supabase
                 .from('locations')
                 .select('*')
-                .eq('tour', 'M'); // Filter where tour = 'M'
+                .eq('tour', 'M');
 
             if (error) {
                 console.error('Supabase error:', error);
@@ -31,13 +33,9 @@ export default function TourOne() {
             const markersJs = data.map((loc: Location) => `
         L.marker([${loc.latitude}, ${loc.longitude}])
           .addTo(map)
-          .bindPopup(\`
-              <div style="max-width: 320px; padding: 8px;">
-                <p style="margin: 0 0 10px 0; font-size: 16px; font-weight: bold;">${loc.title || "Location"}</p>
-                <p style="margin: 0 0 10px 0; font-size: 14px;">${loc.description}</p>
-                <img src="${loc.image_url}" alt="Image" style="width: 100%; height: auto; border-radius: 8px;" />
-              </div>
-            \`);
+          .on('click', () => {
+            window.ReactNativeWebView.postMessage('${loc.id}');
+          });
       `).join('\n');
 
             const leafletHtml = `
@@ -77,6 +75,14 @@ export default function TourOne() {
             originWhitelist={['*']}
             source={{ html: htmlContent }}
             javaScriptEnabled
+            style={{ flex: 1 }}
+            onMessage={(event) => {
+                const locationId = event.nativeEvent.data;
+                router.push({
+                    pathname: '/tours/TourDetail',
+                    params: { id: locationId },
+                });
+            }}
         />
     );
 }
