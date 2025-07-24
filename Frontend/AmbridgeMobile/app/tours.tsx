@@ -14,6 +14,16 @@ export default function ToursScreen() {
                 title="Markers"
                 onPress={() => router.push('./tours/TourOne')}
             />
+            <View style={styles.spacer} />
+            <Button
+                title="Businesses"
+                onPress={() => router.push('./tours/bTour')}
+            />
+            <View style={styles.spacer} />
+            <Button
+                title="Resources"
+                onPress={() => router.push('./tours/resources')}
+            />
         </View>
     );
 }

@@ -7,11 +7,10 @@
     "\\Frontend\\AmbridgeMobile\\android\\app",
     "\\Frontend\\AmbridgeMobile\\android\\app\\src",
     "\\Frontend\\AmbridgeMobile\\android\\app\\src\\main",
-    "\\Frontend\\AmbridgeMobile\\android\\gradle",
-    "\\Frontend\\AmbridgeMobile\\android\\gradle\\wrapper",
     "\\Frontend\\AmbridgeMobile\\app",
-    "\\Frontend\\AmbridgeMobile\\app\\tours"
+    "\\Frontend\\AmbridgeMobile\\app\\tours",
+    "\\Frontend\\AmbridgeMobile\\scripts"
   ],
-  "SelectedNode": "\\Frontend\\AmbridgeMobile",
+  "SelectedNode": "\\Frontend\\AmbridgeMobile\\eas.json",
   "PreviewInSolutionExplorer": false
 }

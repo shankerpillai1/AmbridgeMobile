@@ -70,6 +70,18 @@ export default function Layout() {
                         href: null, // Prevents it from showing in tab bar
                     }}
                 />
+                <Tabs.Screen
+                    name="tours/bTour"
+                    options={{
+                        href: null, // Prevents it from showing in tab bar
+                    }}
+                />
+                <Tabs.Screen
+                    name="tours/resources"
+                    options={{
+                        href: null, // Prevents it from showing in tab bar
+                    }}
+                />
             <Tabs.Screen name="home" options={{ title: 'Home' }} />
             <Tabs.Screen name="tours" options={{ title: 'Tours' }} />
             <Tabs.Screen name="businesses" options={{ title: 'Businesses'}}/>
