@@ -15,8 +15,7 @@ interface Business {
 const CATEGORIES = [
     'Coffeeshop',
     'Restaurant',
-    'Grocery',
-    'Automotive/Gas',
+    'Beer/Wine',
     'Antique Shop',
     'Other',
 ];

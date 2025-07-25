@@ -1,6 +1,7 @@
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'; // ? Added
 import { supabase } from '@/lib/supabaseClient';
 
 interface Business {
@@ -35,7 +36,10 @@ export default function BusinessDetail() {
         <ScrollView contentContainerStyle={styles.container}>
             <View style={styles.spacer} />
             <TouchableOpacity onPress={() => router.push('/businesses')} style={styles.backButton}>
-                <Text style={styles.backButtonText}>? Back</Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Ionicons name="arrow-back" size={20} color="#b22222" />
+                    <Text style={styles.backButtonText}>Back</Text>
+                </View>
             </TouchableOpacity>
             <Text style={styles.title}>{business.title}</Text>
             <Image
@@ -74,7 +78,8 @@ const styles = StyleSheet.create({
     },
     backButtonText: {
         fontSize: 16,
-        color: '#b22222', // Brick red style back link
+        color: '#b22222',
+        marginLeft: 6,
     },
     spacer: {
         height: 24,

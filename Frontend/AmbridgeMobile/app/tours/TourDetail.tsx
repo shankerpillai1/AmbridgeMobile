@@ -48,6 +48,9 @@ export default function TourDetail() {
             {location.image3_url && (
                 <Image source={{ uri: location.image3_url }} style={{ width: '100%', height: 200, marginBottom: 16 }} />
             )}
+            {location.image4_url && (
+                <Image source={{ uri: location.image4_url }} style={{ width: '100%', height: 200, marginBottom: 16 }} />
+            )}
         </ScrollView>
     );
 }
