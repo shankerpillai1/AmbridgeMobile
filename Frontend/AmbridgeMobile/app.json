@@ -2,6 +2,7 @@
   "expo": {
     "name": "AmbridgeMobile",
     "slug": "AmbridgeMobile",
+    "runtimeVersion": "1.0.1",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/AmbridgeMobileLogo.jpg",
@@ -14,7 +15,11 @@
       "buildNumber": "1.0.1",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
       }
+
     },
     "android": {
       "adaptiveIcon": {
@@ -23,7 +28,8 @@
       },
       "edgeToEdgeEnabled": true,
       "versionCode": 2,
-      "package": "com.shankerpillai.AmbridgeMobile"
+      "package": "com.shankerpillai.AmbridgeMobile",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "bundler": "metro",
@@ -52,6 +58,9 @@
       "eas": {
         "projectId": "99dbd72e-8a37-4994-873d-a88bc2819e72"
       }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/99dbd72e-8a37-4994-873d-a88bc2819e72"
     }
   }
 }
