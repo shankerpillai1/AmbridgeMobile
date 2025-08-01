@@ -29,7 +29,7 @@
       "edgeToEdgeEnabled": true,
       "versionCode": 2,
       "package": "com.shankerpillai.AmbridgeMobile",
-      "runtimeVersion": "1.0.0"
+      "runtimeVersion": "1.0.1"
     },
     "web": {
       "bundler": "metro",
