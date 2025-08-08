@@ -1,4 +1,5 @@
 # AmbridgeMobile
-Code for Ambridge Mobile App in Development
-
-Currently Developing Frontend
+Ambridge Mobile is complete and released on iOS and Android!
+Please download nad leave a positive review
+https://apps.apple.com/us/app/ambridge-mobile/id6749190485
+https://play.google.com/store/apps/details?id=com.shankerpillai.AmbridgeMobile
