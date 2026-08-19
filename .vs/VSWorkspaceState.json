@@ -5,12 +5,11 @@
     "\\Frontend\\AmbridgeMobile",
     "\\Frontend\\AmbridgeMobile\\android",
     "\\Frontend\\AmbridgeMobile\\android\\app",
-    "\\Frontend\\AmbridgeMobile\\android\\app\\src",
-    "\\Frontend\\AmbridgeMobile\\android\\app\\src\\main",
+    "\\Frontend\\AmbridgeMobile\\android\\app\\src\\main\\java\\com\\shankerpillai",
+    "\\Frontend\\AmbridgeMobile\\android\\app\\src\\main\\java\\com\\shankerpillai\\AmbridgeMobile",
     "\\Frontend\\AmbridgeMobile\\app",
-    "\\Frontend\\AmbridgeMobile\\app\\tours",
     "\\Frontend\\AmbridgeMobile\\scripts"
   ],
-  "SelectedNode": "\\Frontend\\AmbridgeMobile\\eas.json",
+  "SelectedNode": "\\Frontend\\AmbridgeMobile\\babel.config.js",
   "PreviewInSolutionExplorer": false
 }
