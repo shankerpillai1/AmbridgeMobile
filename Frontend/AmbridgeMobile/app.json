@@ -27,9 +27,9 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "versionCode": 2,
+      "versionCode": 3,
       "package": "com.shankerpillai.AmbridgeMobile",
-      "runtimeVersion": "1.0.1"
+      "runtimeVersion": "1.0.2"
     },
     "web": {
       "bundler": "metro",

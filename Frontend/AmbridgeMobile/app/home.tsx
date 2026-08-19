@@ -9,11 +9,7 @@ interface FacebookPost {
     image_url: string | null;
 }
 
-const bannerImages = [
-    require('../assets/images/ambridgeView.jpeg'),
-    require('../assets/images/ambridgeView2.jpeg'),
-    require('../assets/images/oldEconomy.jpeg'),
-];
+
 
 export default function HomeScreen() {
     const [fontsLoaded] = useFonts({ Cinzel_700Bold });
@@ -57,9 +53,7 @@ export default function HomeScreen() {
                 </View>
             )}
 
-            {bannerImages.map((img, index) => (
-                <Image key={index} source={img} style={styles.bannerImage} resizeMode="cover" />
-            ))}
+            
 
             <Text style={styles.welcomeText}>Welcome to Ambridge Mobile!</Text>
         </ScrollView>
